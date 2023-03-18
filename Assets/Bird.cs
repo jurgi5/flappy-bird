@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public AudioSource jump;
 
     private void Update()
     {
@@ -16,6 +17,6 @@ public class Bird : MonoBehaviour
     void Jump()
     {
         rb.velocity = new Vector2(0, 5);
-
+        jump.Play();
     }
 }
